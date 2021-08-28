@@ -5,21 +5,26 @@ image for a Minecraft Java server.
 
 ## Setup
 
+Install Docker or another tool like podman on the system which is intended be running the server.
+
 Clone this repository via git or download the packaged zip from the GitHub page top right. Then open a shell or cmd in
 this directory and issue the needed commands described below.
 
 ## Downloading the server.jar
 
-Start you Minecraft Java launcher and select the installation tab. Click on, or create a new, installation for which you
+Start your Minecraft Java launcher and select the installation tab. Click on, or create a new, installation for which you
 want to create the Minecraft server. In the new screen click on the "Server Download" button, right above the dropdown
 for the version.
 
-Place the downloaded server.jar file into the container-content directory and proceed with the building the server. 
+Place the downloaded server.jar file into the container-content directory and proceed with the 'Building the server' step. 
 
 ## Building the server:
 
 ```shell
 # You can use any tag but it should correspond to the version you are using 
+# `build`
+#   Build a new image from a Dockerfile. In this case it builds an image, which can be consumed by an virtualization host
+#   like docker
 docker build -t minecraft-server-1.17.1 .
 ```
 
