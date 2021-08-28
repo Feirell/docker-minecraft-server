@@ -24,7 +24,16 @@ Place the downloaded server.jar file into the container-content directory and pr
 # You can use any tag but it should correspond to the version you are using 
 # `build`
 #   Build a new image from a Dockerfile. In this case it builds an image, which can be consumed by an virtualization host
-#   like docker
+#   like docker.
+#   This image is like a template from which you can create a container, which is used for an instance which runs in the
+#   end.
+# `-t minecraft-server-1.17.1`
+#   This defines a tag which makes it easier to identify this image later when creating the container.
+#   You can use any name you would like, but it will detach the identical tag, if already present, so chose one which is
+#   unique to this image contents
+# `.`
+#   The path to the directory containing the Dockerfile to use for this build.
+#   The the dockerfile for more information about its significance.
 docker build -t minecraft-server-1.17.1 .
 ```
 
